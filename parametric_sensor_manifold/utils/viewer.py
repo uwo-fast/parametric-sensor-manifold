@@ -9,7 +9,10 @@ from ocp_vscode import (
     show_clear,
 )
 
-from parametric_sensor_manifold.utils.config import VIEWER_DEFAULTS, VIEWER_PORT
+from parametric_sensor_manifold.utils.config import (
+    VIEWER_DEFAULTS,
+    VIEWER_PORT,
+)
 
 
 def setup_viewer():
