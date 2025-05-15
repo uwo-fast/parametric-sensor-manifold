@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parametric_sensor_manifold"
+version = "0.1.0"
+description = "A parametric sensor manifold design."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Cameron Brooks", email = "cbrook49@uwo.ca" },
+]
+dependencies = [
+    "build123d",
+    "build123d_ease",
+    "ocp_vscode",
+    "bd_warehouse @ git+https://github.com/gumyr/bd_warehouse.git",
+    "loguru",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "parametric_sensor_manifold",
+    "parametric_sensor_manifold.*",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 79
+select = ["E", "F", "I", "C", "Q"]
+ignore = [
+    "D203",
+    "D213",
+    "ERA001",
+    "S101",
+    "RET504",
+    "COM812",
+    "D100",
+    "TD003",
+    "FIX002",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.pyright]
+typeCheckingMode = "basic"
+
+[tool.black]
+line-length = 79
